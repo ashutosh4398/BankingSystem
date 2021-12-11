@@ -1,0 +1,15 @@
+.card {
+    box-shadow: 10px 10px 30px rgba(0,0,0,.3);
+    padding: 10px;
+}
+
+.dashboard-charts{ 
+    margin-top: 20px !important;
+    display: flex;
+}
+
+.money-transfer-block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

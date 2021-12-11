@@ -1,0 +1,75 @@
+.navbar{
+    background: #7F00FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    padding: 20px 0;
+}
+
+.sidebar-animation {
+    animation-name: sidebarTrans;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.sidebar-animation-ends {
+    animation-name: sidebarTransEnds;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.sidebar {
+    min-height: 100%;
+    background-color: #ffffff;
+    width: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* visibility: hidden; */
+    opacity: 0;
+    z-index: 10;
+    transition: all .5s;
+    backface-visibility: hidden;
+    box-shadow: 10px 10px 30px rgba(0,0,0,.9);
+    position: fixed;
+}
+
+ul li {
+    padding: 20px !important;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+@keyframes sidebarTrans {
+    0% {
+        width: 0;
+        /* visibility: hidden; */
+        /* display: none; */
+        opacity: 0;
+        backface-visibility: hidden;
+    }
+    100% {
+        width: 300px;
+        /* visibility: visible; */
+        /* display: block; */
+        opacity: 1;
+        backface-visibility: hidden;
+    }
+}
+
+
+@keyframes sidebarTransEnds {
+    0% {
+        width: 300px;
+        opacity: 1;
+    }
+    100% {
+        width: 0px;
+        opacity: 0;
+    }
+}
